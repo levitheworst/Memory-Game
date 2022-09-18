@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memória</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        body
+        {
+            background: fixed;
+            background-image: linear-gradient(to top, rgb(255, 60, 60), rgb(255, 160, 160));
+        }
+        img
+        {
+            display: flex;
+            align-items: center;
+            width: 40%;
+            margin: auto;
+            background-color: white;
+            background-image: linear-gradient(to top, rgb(255, 128, 128), rgb(255, 200, 200));
+        }
+        .container
+        {
+            margin: 10px;
+        }
+        p
+        {
+            font-family: helvetica;
+            font-size: xx-large;
+            text-align: center;
+            font-weight: bolder;
+        }
+        .card-container
+        {
+            display: grid;
+            width: 90%;
+            margin: auto;
+            grid-template-columns: auto auto auto auto;
+        }
+        .card
+        {
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            background-image: url('src/carta.png');
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <p style="width:90%;margin:auto;"></p>
+    <form style="margin-top:10px;margin-bottom:10px;">
+        <button style="border:0;background-color:green;padding:5px;"type="submit">
+            <p>Recomeçar</p>
+        </button>         
+    </form>
+    <div class="container">
+        <p>Número de vitórias: <span id="vitorias"></span></p>
+        <img src="src/memória.png"></img>
+        <div class="card-container">
+            <div class="card" onclick="control(0)"></div>
+            <div class="card" onclick="control(1)"></div>
+            <div class="card" onclick="control(2)"></div>
+            <div class="card" onclick="control(3)"></div>
+            <div class="card" onclick="control(4)"></div>
+            <div class="card" onclick="control(5)"></div>
+            <div class="card" onclick="control(6)"></div>
+            <div class="card" onclick="control(7)"></div>
+            <div class="card" onclick="control(8)"></div>
+            <div class="card" onclick="control(9)"></div>
+            <div class="card" onclick="control(10)"></div>
+            <div class="card" onclick="control(11)"></div>
+        </div>
+    </div>
+    <audio style="display: none;" src="src/Better Call Saul Slowed.mp3"></audio>
+    <audio style="display: none;" src="src/The Godfather Finale.mp3"></audio>
+    <script src="main.js"></script>
+</body>
+</html>
