@@ -16,53 +16,62 @@
             background: fixed;
             background-image: linear-gradient(to top, rgb(255, 60, 60), rgb(255, 160, 160));
         }
-        img
+        .titulo
         {
             display: flex;
             align-items: center;
-            width: 40%;
             margin: auto;
             background-color: white;
             background-image: linear-gradient(to top, rgb(255, 128, 128), rgb(255, 200, 200));
-        }
-        .container
-        {
-            margin: 10px;
+            height: 10vh;
+            width: 25vw;
         }
         p
         {
             font-family: helvetica;
-            font-size: xx-large;
+            font-size: large;
             text-align: center;
             font-weight: bolder;
         }
         .card-container
         {
             display: grid;
-            width: 90%;
+            width: 50vw;
             margin: auto;
             grid-template-columns: auto auto auto auto;
         }
         .card
         {
-            width: 200px;
-            height: 200px;
-            margin: auto;
+            width: 9rem;
+            height: 9rem;
+            margin: 5px;
             background-image: url('src/carta.png');
+            background-size: contain;
             background-repeat: no-repeat;
+        }
+        .recomecar
+        {
+            margin: auto 1rem;
+            border: 2px solid white;
+            border-radius: 14px;
+            color: white;
+            background-color: rgb(6, 156, 39);
+            padding: .5rem;
+            font-size: larger;
         }
     </style>
 </head>
 <body>
-    <p style="width:90%;margin:auto;"></p>
+    <p style="width:100vw;margin:auto;"></p>
     <form style="margin-top:10px;margin-bottom:10px;">
-        <button style="border:0;background-color:green;padding:5px;"type="submit">
-            <p>Recomeçar</p>
-        </button>         
+        <button class="recomecar" type="submit">
+            Recomeçar
+        </button>
     </form>
+    <hr>
     <div class="container">
         <p>Número de vitórias: <span id="vitorias"></span></p>
-        <img src="src/memória.png"></img>
+        <img class="titulo" src="src/memória.png"></img>
         <div class="card-container">
             <div class="card" onclick="control(0)"></div>
             <div class="card" onclick="control(1)"></div>
